@@ -1,6 +1,5 @@
 #!/bin/bash
 # Refer to http://wiki.ros.org/noetic/Installation/Ubuntu
-rosdist=foxy
 
 function failed()
 {
