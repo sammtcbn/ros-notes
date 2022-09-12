@@ -1,5 +1,9 @@
 #!/bin/bash
+
+# Foxy
 # refer to https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
+
+rosdist=foxy
 
 function failed()
 {
@@ -26,9 +30,9 @@ sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o
 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(source /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
 
-# install ROS2 foxy
+# install ROS2
 sudo apt -y update || failed "apt update fail"
-sudo apt -y install ros-foxy-desktop || failed "apt install ros-foxy-desktop fail"
+sudo apt -y install ros-${rosdist}-desktop || failed "apt install ros-${rosdist}-desktop fail"
 
-#source /opt/ros/foxy/setup.bash
-#echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
+source /opt/ros/${rosdist}/setup.bash
+echo "source /opt/ros/${rosdist}/setup.bash" >> ~/.bashrc

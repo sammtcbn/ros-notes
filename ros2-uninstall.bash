@@ -1,5 +1,9 @@
 #!/bin/bash
+
+# Foxy
 # refer to https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
+
+rosdist=foxy
 
 function failed()
 {
@@ -12,7 +16,7 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
-sudo apt -y remove ~nros-foxy-* || failed "apt remove fail"
+sudo apt -y remove ~nros-${rosdist}-* || failed "apt remove fail"
 sudo apt -y autoremove || failed "apt autoremove fail"
 sudo apt -y autoclean || failed "apt autoclean fail"
 
