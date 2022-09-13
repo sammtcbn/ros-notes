@@ -10,11 +10,6 @@ function failed()
     exit 1
 }
 
-if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root"
-    exit
-fi
-
 sudo apt -y install ros-${rosdist}-moveit || failed "apt install ros-${rosdist}-moveit fail"
 
 # refer to https://wiki.ros.org/rqt/UserGuide/Install/Groovy

@@ -7,9 +7,4 @@ function failed()
     exit 1
 }
 
-if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root"
-    exit
-fi
-
 sudo apt -y install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential || failed "fail to install dependencies for build ROS package"

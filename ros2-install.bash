@@ -11,11 +11,6 @@ function failed()
     exit 1
 }
 
-if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root"
-    exit
-fi
-
 # system update
 sudo apt -y update || failed "apt update fail"
 sudo apt -y upgrade || failed "apt upgrade fail"

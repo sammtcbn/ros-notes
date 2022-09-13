@@ -11,11 +11,6 @@ function failed()
     exit 1
 }
 
-if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root"
-    exit
-fi
-
 sudo apt -y remove ~nros-${rosdist}-* || failed "apt remove fail"
 sudo apt -y autoremove || failed "apt autoremove fail"
 sudo apt -y autoclean || failed "apt autoclean fail"
