@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Install ROS in Ubuntu
+# refer to refer to http://wiki.ros.org/noetic/Installation/Ubuntu
+
 # Foxy
 # refer to https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
 
