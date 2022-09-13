@@ -22,3 +22,6 @@ sudo apt -y install ros-${ROS_DISTRO}-rqt-moveit || failed "fail to install ros-
 # turtlesim
 # refer to http://wiki.ros.org/turtlesim
 sudo apt -y install ros-${ROS_DISTRO}-turtlesim || failed "fail to install ros-${ROS_DISTRO}-turtlesim"
+
+# Gazebo
+sudo apt -y install ros-${ROS_DISTRO}-gazebo-* || failed "fail to install ros-${ROS_DISTRO}-gazebo-*"
