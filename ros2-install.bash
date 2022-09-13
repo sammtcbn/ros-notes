@@ -3,7 +3,7 @@
 # Foxy
 # refer to https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
 
-rosdist=foxy
+ROS_DISTRO=foxy
 
 function failed()
 {
@@ -27,7 +27,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 
 # install ROS2
 sudo apt -y update || failed "apt update fail"
-sudo apt -y install ros-${rosdist}-desktop || failed "apt install ros-${rosdist}-desktop fail"
+sudo apt -y install ros-${ROS_DISTRO}-desktop || failed "apt install ros-${ROS_DISTRO}-desktop fail"
 
-source /opt/ros/${rosdist}/setup.bash
-echo "source /opt/ros/${rosdist}/setup.bash" >> ~/.bashrc
+source /opt/ros/${ROS_DISTRO}/setup.bash
+echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
