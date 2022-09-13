@@ -10,6 +10,7 @@ function failed()
 }
 
 sudo apt -y install git || failed "fail to install git"
+sudo apt -y install cmake || failed "fail to cmake"
 sudo apt -y install python3-argcomplete || failed "fail to install python3-argcomplete"
 sudo apt -y install python3-pip || failed "fail to install python3-pip"
 sudo apt -y install build-essential || failed "fail to install build-essential"
