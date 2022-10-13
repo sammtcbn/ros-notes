@@ -14,6 +14,11 @@ function failed()
     exit 1
 }
 
+# locale
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # system update
 sudo apt -y update || failed "apt update fail"
 sudo apt -y upgrade || failed "apt upgrade fail"
